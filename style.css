@@ -1,0 +1,83 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body{
+  height: 100vh;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 58% 38%;
+  grid-column-gap: 4%;
+  justify-items: center;
+  padding-top: 50px;
+}
+
+#canvas{
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+
+#box{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background: black;
+  transition: top 0.2s ease-out 0s,left 0.2s ease-out 0s;
+}
+
+.controls{
+  display: grid;
+  align-self: center;
+  justify-items: center;
+  width: 100%;
+  grid-auto-rows: 44px;
+  grid-row-gap: 20px;
+}
+
+.controls > div {
+  text-align: center;
+  line-height: 44px;
+  width: 60%;
+  background: #eee;
+  color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls > div:hover{
+  background: #ddd;
+  color: rgba(0,0,0,0.6);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .container{
+    grid-template-columns: 100%;
+    grid-template-rows: 58% 38%;
+    grid-row-gap: 4%;
+  }
+}
+
+.navigation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.navigation > a{
+  color: rgba(0,0,0,0.6);
+  text-decoration: none;
+  display: inline-grid;
+}
